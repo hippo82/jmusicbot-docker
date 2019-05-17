@@ -1,0 +1,13 @@
+[Unit]
+Description=JMusicBot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/bot/
+ExecStart=java -Dnogui=true -jar JMusicBot-VERSION-Linux.jar
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
